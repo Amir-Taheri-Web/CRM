@@ -18,6 +18,7 @@ html {
   font-family: "";
   box-sizing: border-box;
   font-size: 16px;
+  background-color: var(--color-one);
 }
 
 *,
@@ -98,6 +99,6 @@ body {
   max-width: 1500px;
   min-height: 100vh;
   padding: 3rem 1rem;
-  background-color: inherit;
+  background-color: var(--color-one);
 }
 /* CSS RESET END */
