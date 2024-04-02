@@ -1,0 +1,44 @@
+.main {
+  margin: auto;
+  max-width: 1500px;
+  min-height: 100vh;
+}
+
+.header,
+.footer {
+  padding: 1rem 8vw;
+  background-color: var(--color-three);
+  color: var(--color-white);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header a:nth-child(2) {
+  font-size: 1.2rem;
+  font-weight: 600;
+  background-color: var(--color-four);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: all 0.2s ease-out;
+}
+
+.header a:nth-child(2):hover {
+  background-color: var(--color-two);
+}
+
+.footer {
+  text-align: center;
+}
+
+.footer a {
+  font-size: 1.2rem;
+  transition: all 0.2s ease-out;
+}
+
+.footer a:hover {
+  color: var(--color-four);
+}

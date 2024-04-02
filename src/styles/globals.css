@@ -7,11 +7,10 @@
   /* Colors */
   --color-black: #000000;
   --color-white: #ffffff;
-  --color-one: #140405;
-  --color-two: #2e0f0a;
-  --color-three: #332420;
-  --color-four: #72421f;
-  --color-five: #4d2806;
+  --color-one: #000000;
+  --color-two: #150050;
+  --color-three: #3f0071;
+  --color-four: #fb2576;
 }
 
 html {
@@ -95,10 +94,6 @@ textarea {
 }
 
 body {
-  margin: auto;
-  max-width: 1500px;
-  min-height: 100vh;
-  padding: 3rem 1rem;
   background-color: var(--color-one);
 }
 /* CSS RESET END */
