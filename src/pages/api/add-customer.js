@@ -5,9 +5,9 @@ const handler = async (req, res) => {
   if (req.method === "POST") {
     await connectDB(res);
 
-    const data = req.body.data;
+    const data = req.body;
 
-    if (data.firstName || data.lastName || data.email) {
+    if (!data.firstName || !data.lastName || !data.email) {
       res.status(422).json({
         code: 422,
         status: "failure",
@@ -18,15 +18,14 @@ const handler = async (req, res) => {
     try {
       const customer = await Customer.create(data);
 
-      res
-        .status(201)
-        .json({
-          code: 201,
-          status: "success",
-          message: "Customer added successfully",
-          data: customer,
-        });
+      res.status(201).json({
+        code: 201,
+        status: "success",
+        message: "Customer added successfully",
+        data: customer,
+      });
     } catch (error) {
+      console.log(error);
       res.status(500).json({
         code: 500,
         status: "failure",
