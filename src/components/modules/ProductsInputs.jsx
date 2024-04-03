@@ -1,12 +1,14 @@
+import styles from "@/styles/ProductsInputs.module.css";
+
 const ProductsInputs = ({ form, setForm }) => {
   const { products } = form;
 
   const changeHandler = () => {};
 
   return (
-    <div>
+    <div className={styles.container}>
       <h3>Products</h3>
-      <div>
+      <div className={styles.inputs}>
         <div>
           <label htmlFor="productName">Product Name</label>
           <input

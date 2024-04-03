@@ -1,0 +1,45 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--color-four);
+  gap: 1rem;
+}
+
+.container h3 {
+  font-size: 1.7rem;
+  color: var(--color-four);
+}
+
+.inputs {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  border: 2px solid var(--color-two);
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.inputs div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.inputs div:first-of-type {
+  width: 100%;
+}
+
+.inputs div:not(:first-of-type) {
+  flex: 1;
+}
+
+.inputs input {
+  padding: 0.5rem;
+  background-color: var(--color-one);
+  color: var(--color-white);
+  border: 2px solid var(--color-three);
+  border-radius: 5px;
+  font-size: 1.1rem;
+}
