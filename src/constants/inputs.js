@@ -4,9 +4,9 @@ const INPUTS = [
   "email",
   "phone",
   "postalCode",
+  "address",
   "date",
   "products",
-  "address",
 ];
 
 export default INPUTS;
