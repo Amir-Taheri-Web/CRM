@@ -5,6 +5,7 @@ import Link from "next/link";
 import styles from "@/styles/AddCustomerPage.module.css";
 import api from "@/configs/api";
 import { useRouter } from "next/router";
+import ProductsInputs from "../modules/ProductsInputs";
 
 const AddCustomerPage = () => {
   const [form, setForm] = useState({
@@ -53,6 +54,8 @@ const AddCustomerPage = () => {
             )
         )}
       </div>
+
+      <ProductsInputs form={form} setForm={setForm} />
 
       <div className={styles.buttons}>
         <Link href="/">Cancel</Link>
