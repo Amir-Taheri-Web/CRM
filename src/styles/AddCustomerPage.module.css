@@ -1,0 +1,34 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttons button,
+.buttons a {
+  color: var(--color-white);
+  background-color: var(--color-four);
+  padding: 0.5rem 1rem;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.buttons button {
+  background-color: var(--color-three);
+}
+
+.buttons button:disabled {
+  opacity: 0.5;
+}

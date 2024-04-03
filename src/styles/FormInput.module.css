@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.container label {
+  text-transform: capitalize;
+  color: var(--color-four);
+  font-weight: 500;
+}
+
+.container input {
+  border: 2px solid var(--color-three);
+  background-color: var(--color-one);
+  color: var(--color-white);
+  padding: 0.5rem;
+  font-size: 1.1rem;
+  border-radius: 5px;
+}
