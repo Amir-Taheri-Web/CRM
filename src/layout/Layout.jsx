@@ -12,7 +12,9 @@ const Layout = ({ children }) => {
         <Link href="/add-customer">Add Customer</Link>
       </header>
 
-      <main className={styles.main}>{children}</main>
+      <main className={styles.main}>
+        {children}
+      </main>
 
       <footer className={styles.footer}>
         <a

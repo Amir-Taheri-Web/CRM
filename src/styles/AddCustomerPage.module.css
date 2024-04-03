@@ -28,3 +28,7 @@
 .buttons button {
   background-color: var(--color-three);
 }
+
+.buttons button:disabled {
+  opacity: 0.5;
+}

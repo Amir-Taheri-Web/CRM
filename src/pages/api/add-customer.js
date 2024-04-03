@@ -5,7 +5,7 @@ const handler = async (req, res) => {
   if (req.method === "POST") {
     await connectDB(res);
 
-    const data = req.body;
+    const data = req.body.data;
 
     if (!data.firstName || !data.lastName || !data.email) {
       res.status(422).json({
