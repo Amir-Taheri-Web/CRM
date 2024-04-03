@@ -15,6 +15,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 5rem;
 }
 
 .header a:nth-child(2) {
@@ -32,6 +33,7 @@
 
 .footer {
   text-align: center;
+  margin-top: 5rem;
 }
 
 .footer a {
