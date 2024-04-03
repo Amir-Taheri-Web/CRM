@@ -23,6 +23,12 @@ const ProductsInputs = ({ form, setForm }) => {
     }));
   };
 
+  const removeHandler = (i) => {
+    const newProducts = products.filter((product, index) => index !== i);
+
+    setForm((form) => ({ ...form, products: newProducts }));
+  };
+
   return (
     <div className={styles.container}>
       <h3>Products</h3>
@@ -61,6 +67,14 @@ const ProductsInputs = ({ form, setForm }) => {
                 id="qty"
               />
             </div>
+
+            <button
+              type="button"
+              className={styles.removeButton}
+              onClick={() => removeHandler(index)}
+            >
+              Remove
+            </button>
           </div>
         ))}
 

@@ -39,6 +39,7 @@ const AddCustomerPage = () => {
 
   return (
     <div className={styles.container}>
+      <h2>Add Customer</h2>
       <div className={styles.inputs}>
         {INPUTS.map(
           (item, index) =>

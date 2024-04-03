@@ -32,3 +32,9 @@
 .buttons button:disabled {
   opacity: 0.5;
 }
+
+.container h2 {
+  color: var(--color-four);
+  text-align: center;
+  font-size: 1.8rem;
+}

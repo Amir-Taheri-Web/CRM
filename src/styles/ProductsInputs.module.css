@@ -7,7 +7,7 @@
 }
 
 .container h3 {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   color: var(--color-four);
 }
 
@@ -57,10 +57,21 @@
 .addProductButton {
   width: 100%;
   background-color: var(--color-three);
-  padding: 0.3rem 1rem;
+  padding: 0.5rem 1rem;
   border-radius: 5px;
   color: var(--color-white);
   font-size: 1.1rem;
   font-weight: 600;
   cursor: pointer;
+}
+
+.removeButton {
+  width: 100%;
+  padding: 0.3rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: var(--color-four);
+  color: var(--color-white);
+  font-weight: 600;
+  font-size: 1.1rem;
 }
