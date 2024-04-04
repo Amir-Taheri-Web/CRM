@@ -6,27 +6,32 @@ import styles from "@/styles/AddCustomerPage.module.css";
 import api from "@/configs/api";
 import { useRouter } from "next/router";
 import ProductsInputs from "../modules/ProductsInputs";
+import moment from "moment";
 
-const AddCustomerPage = () => {
+const CustomerEditPage = ({ customer }) => {
   const [form, setForm] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    phone: "",
-    postalCode: "",
-    address: "",
-    date: "",
-    products: [],
+    firstName: customer.firstName,
+    lastName: customer.lastName,
+    email: customer.email,
+    phone: customer.phone || "",
+    postalCode: customer.postalCode || "",
+    address: customer.address || "",
+    date: moment(customer.date).format("YYYY-MM-DD") || "",
+    products: customer.products || [],
+    updatedAt: moment(Date.now()).format("YYYY-MM-DD"),
   });
 
   const router = useRouter();
 
   const [isLoading, setIsLoading] = useState(false);
 
-  const addHandler = async () => {
+  const editHandler = async () => {
     try {
       setIsLoading(true);
-      const res = await api.post("/api/add-customer", { data: form });
+      const res = await api.patch(`/api/customer/edit/${customer._id}`, {
+        data: form,
+      });
+      console.log(res);
 
       setIsLoading(false);
       router.push("/");
@@ -38,7 +43,7 @@ const AddCustomerPage = () => {
 
   return (
     <div className={styles.container}>
-      <h2>Add Customer</h2>
+      <h2>Edit Customer</h2>
       <div className={styles.inputs}>
         {INPUTS.map(
           (item, index) =>
@@ -59,12 +64,12 @@ const AddCustomerPage = () => {
 
       <div className={styles.buttons}>
         <Link href="/">Cancel</Link>
-        <button type="button" onClick={addHandler} disabled={isLoading}>
-          Add
+        <button type="button" onClick={editHandler} disabled={isLoading}>
+          Edit
         </button>
       </div>
     </div>
   );
 };
 
-export default AddCustomerPage;
+export default CustomerEditPage;
