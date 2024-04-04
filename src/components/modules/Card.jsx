@@ -29,7 +29,7 @@ const Card = ({ customer }) => {
           Delete
         </button>
         <Link href="#">Edit</Link>
-        <Link href="#">Details</Link>
+        <Link href={`/customer/details/${customer._id}`}>Details</Link>
       </div>
     </li>
   );
