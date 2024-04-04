@@ -18,6 +18,7 @@ Next.js CRM app. The emphasis of this app is on Next.js api and MongoDB database
 - Moment([Link](https://momentjs.com/))
 - Mongoose([Link](https://mongoosejs.com/))
 - React-hot-toast([Link](https://react-hot-toast.com/))
+- SWR([Link](https://swr.vercel.app/))
 
 ### Installing
 
