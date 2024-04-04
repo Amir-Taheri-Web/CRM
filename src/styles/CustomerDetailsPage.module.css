@@ -68,3 +68,28 @@
   color: var(--color-white);
   font-weight: 600;
 }
+
+@media only screen and (max-width: 470px) {
+  .info h2,
+  .products h2 {
+    font-size: 1.6rem;
+  }
+
+  .info div p,
+  .products ul li p {
+    font-size: 1rem;
+  }
+
+  .info,
+  .products {
+    overflow-x: scroll;
+  }
+
+  .info::-webkit-scrollbar {
+    height: 5px;
+  }
+
+  .products::-webkit-scrollbar {
+    height: 5px;
+  }
+}

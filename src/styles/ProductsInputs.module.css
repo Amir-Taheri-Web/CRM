@@ -75,3 +75,21 @@
   font-weight: 600;
   font-size: 1.1rem;
 }
+
+@media only screen and (max-width: 500px) {
+  .inputsWrapper inputs {
+    width: 100%;
+  }
+
+  .inputsWrapper div {
+    width: 100%;
+  }
+
+  .inputs {
+    padding: 1rem;
+  }
+
+  .inputsWrapper {
+    padding: 1rem;
+  }
+}

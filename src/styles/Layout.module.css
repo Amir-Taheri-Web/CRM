@@ -16,6 +16,8 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 5rem;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .header a:nth-child(2) {
@@ -43,4 +45,43 @@
 
 .footer a:hover {
   color: var(--color-four);
+}
+
+@media only screen and (max-width: 1600px) {
+  .main {
+    max-width: 1200px;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .main {
+    max-width: 100%;
+    padding: 0rem 3rem;
+  }
+  .header {
+    padding: 1rem 3rem;
+  }
+
+  .footer {
+    padding: 1rem 3rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .header a:nth-child(2) {
+    font-size: 1rem;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .header {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .main {
+    padding: 0rem 2rem;
+  }
 }

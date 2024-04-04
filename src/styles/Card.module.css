@@ -37,3 +37,59 @@
   padding: 0.5rem 1rem;
   border-radius: 5px;
 }
+
+@media only screen and (max-width: 1200px) {
+  .listItem div p:first-of-type {
+    min-width: auto;
+  }
+}
+
+@media only screen and (max-width: 838px) {
+  .listItem {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .listItem div:first-of-type {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .listItem div:last-of-type {
+    justify-content: space-between;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .listItem div:last-of-type {
+    gap: 1rem;
+  }
+
+  .listItem div p:last-of-type {
+    font-size: 1rem;
+  }
+
+  .listItem div button,
+  .listItem div a {
+    font-size: 1rem;
+  }
+
+  .listItem {
+    overflow-x: scroll;
+  }
+
+  .listItem::-webkit-scrollbar {
+    height: 5px;
+  }
+
+  .listItem::-webkit-scrollbar-thumb {
+    background: var(--color-two);
+  }
+
+  .listItem::-webkit-scrollbar-thumb:hover {
+    background: var(--color-two);
+  }
+}
