@@ -1,3 +1,5 @@
+import styles from "@/styles/CustomerDetailsPage.module.css";
+
 const CustomerDetailsPage = ({ customer }) => {
   const {
     firstName,
@@ -13,8 +15,8 @@ const CustomerDetailsPage = ({ customer }) => {
   } = customer;
 
   return (
-    <div>
-      <div>
+    <div className={styles.container}>
+      <div className={styles.info}>
         <h2>Customer Information</h2>
         <div>
           <p>
@@ -39,21 +41,22 @@ const CustomerDetailsPage = ({ customer }) => {
           </p>
           <p>
             <span>Date: </span>
-            {date}
+            {new Date(date).toLocaleDateString()}
           </p>
           <p>
             <span>Created At: </span>
-            {createdAt}
+            {new Date(createdAt).toLocaleDateString()}
           </p>
           <p>
             <span>Updated At: </span>
-            {updatedAt}
+            {new Date(updatedAt).toLocaleDateString()}
           </p>
         </div>
       </div>
 
-      <div>
+      <div className={styles.products}>
         <h2>Customer Products</h2>
+        {!products.length && <p>Empty</p>}
         <ul>
           {products.map((product, index) => (
             <li key={index}>

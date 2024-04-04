@@ -1,0 +1,70 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.info,
+.products {
+  background-color: var(--color-two);
+  padding: 2rem;
+  color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  border-radius: 10px;
+}
+
+.info h2,
+.products h2 {
+  color: var(--color-four);
+  font-size: 1.7rem;
+}
+
+.info div {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 2rem;
+}
+
+.info div p {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.info div p span {
+  color: var(--color-four);
+  margin-right: 0.3rem;
+}
+
+.products ul {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.products ul li {
+  border: 2px solid var(--color-four);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.products ul li p {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.products ul li p span {
+  color: var(--color-four);
+  margin-right: 0.3rem;
+}
+
+.products > p {
+  font-size: 1.3rem;
+  color: var(--color-white);
+  font-weight: 600;
+}
