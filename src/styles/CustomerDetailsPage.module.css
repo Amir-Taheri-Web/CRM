@@ -38,9 +38,8 @@
 }
 
 .products ul {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   gap: 2rem;
 }
 
@@ -83,6 +82,7 @@
   .info,
   .products {
     overflow-x: scroll;
+    padding: 1rem;
   }
 
   .info::-webkit-scrollbar {
@@ -91,5 +91,9 @@
 
   .products::-webkit-scrollbar {
     height: 5px;
+  }
+
+  .products ul {
+    grid-template-columns: auto;
   }
 }
