@@ -54,6 +54,6 @@ const customerSchema = new Schema({
   },
 });
 
-const Customer = models.Customer || model("Customer", customerSchema);
+const Customer = models?.Customer || model("Customer", customerSchema);
 
 export default Customer;

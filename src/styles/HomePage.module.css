@@ -3,3 +3,9 @@
   flex-direction: column;
   gap: 3rem;
 }
+
+.loading {
+  color: var(--color-four);
+  font-size: 2rem;
+  text-align: center;
+}

@@ -1,25 +1,15 @@
 import HomePage from "@/components/templates/HomePage";
-import Customer from "@/model/customer";
-import connectDB from "@/utils/connectDB";
+import api from "@/configs/api";
+import useSWR from "swr";
 
-const Home = ({ customers }) => {
-  return <HomePage customers={customers} />;
-};
+const Home = () => {
+  const fetcher = async (url) => await api.get(url);
 
-const getServerSideProps = async () => {
-  try {
-    await connectDB();
-    const customers = await Customer.find();
+  const { data, error, isLoading } = useSWR("/api/customers", fetcher);
 
-    return {
-      props: {
-        customers: JSON.parse(JSON.stringify(customers)),
-      },
-    };
-  } catch (error) {
-    console.log(error);
-  }
+  return (
+    <HomePage customers={data?.data} error={error} isLoading={isLoading} />
+  );
 };
 
 export default Home;
-export { getServerSideProps };
