@@ -2,16 +2,20 @@ import Link from "next/link";
 import api from "@/configs/api";
 import styles from "@/styles/Card.module.css";
 import { useRouter } from "next/router";
+import toast from "react-hot-toast";
 
 const Card = ({ customer }) => {
   const router = useRouter();
 
   const deleteHandler = async () => {
     try {
-      await api.delete(`/api/customer/delete/${customer._id}`);
+      const res = await api.delete(`/api/customer/delete/${customer._id}`);
       router.reload();
+      
+      toast.success(res.message);
     } catch (error) {
       console.log(error);
+      toast.error(error.message);
     }
   };
 

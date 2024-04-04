@@ -1,5 +1,6 @@
 import styles from "@/styles/Layout.module.css";
 import Link from "next/link";
+import { Toaster } from "react-hot-toast";
 
 const Layout = ({ children }) => {
   return (
@@ -14,6 +15,7 @@ const Layout = ({ children }) => {
 
       <main className={styles.main}>
         {children}
+        <Toaster />
       </main>
 
       <footer className={styles.footer}>

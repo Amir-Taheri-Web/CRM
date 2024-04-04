@@ -6,6 +6,7 @@ import styles from "@/styles/AddCustomerPage.module.css";
 import api from "@/configs/api";
 import { useRouter } from "next/router";
 import ProductsInputs from "../modules/ProductsInputs";
+import toast from "react-hot-toast";
 
 const AddCustomerPage = () => {
   const [form, setForm] = useState({
@@ -28,11 +29,14 @@ const AddCustomerPage = () => {
       setIsLoading(true);
       const res = await api.post("/api/add-customer", { data: form });
 
+      toast.success(res.message);
+
       setIsLoading(false);
       router.push("/");
     } catch (error) {
       console.log(error);
       setIsLoading(false);
+      toast.error(error.message);
     }
   };
 

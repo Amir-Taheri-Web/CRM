@@ -7,6 +7,7 @@ import api from "@/configs/api";
 import { useRouter } from "next/router";
 import ProductsInputs from "../modules/ProductsInputs";
 import moment from "moment";
+import toast from "react-hot-toast";
 
 const CustomerEditPage = ({ customer }) => {
   const [form, setForm] = useState({
@@ -31,13 +32,15 @@ const CustomerEditPage = ({ customer }) => {
       const res = await api.patch(`/api/customer/edit/${customer._id}`, {
         data: form,
       });
-      console.log(res);
+
+      toast.success(res.message);
 
       setIsLoading(false);
       router.push("/");
     } catch (error) {
       console.log(error);
       setIsLoading(false);
+      toast.error(error.message);
     }
   };
 
