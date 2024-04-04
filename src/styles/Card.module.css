@@ -1,0 +1,39 @@
+.listItem {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  background-color: var(--color-three);
+  color: var(--color-white);
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.listItem div {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+.listItem div p {
+  font-size: 1.1rem;
+}
+
+.listItem div p:first-of-type {
+  min-width: 300px;
+  font-weight: 600;
+}
+
+.listItem div button,
+.listItem div a {
+  font-size: 1.1rem;
+  color: var(--color-white);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.listItem div button {
+  background-color: var(--color-four);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}

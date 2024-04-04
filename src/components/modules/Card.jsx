@@ -1,9 +1,10 @@
 import Link from "next/link";
+import styles from "@/styles/Card.module.css";
 
 const Card = ({ customer }) => {
   console.log(customer);
   return (
-    <li>
+    <li className={styles.listItem}>
       <div>
         <p>
           {customer.firstName} {customer.lastName}
