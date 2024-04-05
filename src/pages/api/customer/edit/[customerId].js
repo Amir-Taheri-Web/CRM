@@ -11,12 +11,13 @@ const handler = async (req, res) => {
     const id = req.query.customerId;
     const data = req.body.data;
 
-    if (!data.firstName || !data.lastName || !data.email) {
+    if (!data.firstName.trim() || !data.lastName.trim() || !data.email.trim()) {
       res.status(422).json({
         code: 422,
         status: "failure",
         message: "Please fill all the required fields",
       });
+      return;
     }
 
     if (data.firstName.length < 2 || data.lastName.lastName < 2) {
@@ -25,6 +26,7 @@ const handler = async (req, res) => {
         status: "failure",
         message: "First Name and Last Name must be at least 2 characters",
       });
+      return;
     }
 
     if (data.phone.length !== 11) {
@@ -34,6 +36,7 @@ const handler = async (req, res) => {
         message:
           "Phone number must be 11 characters and start with 0 like 09198882233",
       });
+      return;
     }
 
     if (!EMAIL_VALIDATION.test(data.email)) {
@@ -42,6 +45,7 @@ const handler = async (req, res) => {
         status: "failure",
         message: "Email is not valid",
       });
+      return;
     }
 
     try {
