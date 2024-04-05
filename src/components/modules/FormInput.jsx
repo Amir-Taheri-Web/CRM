@@ -9,7 +9,11 @@ const FormInput = ({ type, value, setForm, name, label }) => {
 
   return (
     <div className={styles.container}>
-      <label htmlFor={name}>{label}</label>
+      <label htmlFor={name}>
+        {name === "firstName" || name === "lastName" || name === "email"
+          ? `${label}(required)`
+          : label}
+      </label>
       <input
         type={type}
         name={name}

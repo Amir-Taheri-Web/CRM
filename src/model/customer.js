@@ -25,11 +25,7 @@ const customerSchema = new Schema({
     ],
   },
 
-  phone: {
-    type: String,
-    minLength: 11,
-    maxLength: 11,
-  },
+  phone: String,
 
   address: String,
 

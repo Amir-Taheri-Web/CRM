@@ -10,6 +10,7 @@ const handler = async (req, res) => {
 
     const id = req.query.customerId;
     const data = req.body.data;
+    console.log(data);
 
     if (!data.firstName.trim() || !data.lastName.trim() || !data.email.trim()) {
       res.status(422).json({
@@ -29,7 +30,7 @@ const handler = async (req, res) => {
       return;
     }
 
-    if (data.phone.length !== 11) {
+    if (data.phone.length !== 11 && data.phone.length !== 0) {
       res.status(422).json({
         code: 422,
         status: "failure",
@@ -53,6 +54,8 @@ const handler = async (req, res) => {
       for (const item of INPUTS) {
         customer[item] = data[item];
       }
+
+      if (data.phone.length === 0) customer.phone === "";
       customer.save();
 
       res.status(200).json({

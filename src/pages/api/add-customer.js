@@ -27,7 +27,7 @@ const handler = async (req, res) => {
       return;
     }
 
-    if (data.phone.length !== 11) {
+    if (data.phone.length !== 11 && data.phone.length !== 0) {
       res.status(422).json({
         code: 422,
         status: "failure",
@@ -46,8 +46,15 @@ const handler = async (req, res) => {
       return;
     }
 
+    const finalProducts = data.products.filter((product) =>
+      product.productName.trim()
+    );
+
     try {
-      const customer = await Customer.create(data);
+      const customer = await Customer.create({
+        ...data,
+        products: finalProducts,
+      });
 
       res.status(201).json({
         code: 201,

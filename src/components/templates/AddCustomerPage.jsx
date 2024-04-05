@@ -28,9 +28,7 @@ const AddCustomerPage = () => {
     try {
       setIsLoading(true);
       const res = await api.post("/api/add-customer", { data: form });
-
       toast.success(res.message);
-
       setIsLoading(false);
       router.push("/");
     } catch (error) {
