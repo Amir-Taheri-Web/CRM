@@ -56,6 +56,11 @@ const handler = async (req, res) => {
       }
 
       if (data.phone.length === 0) customer.phone === "";
+
+      customer.products = customer.products.filter((product) =>
+        product.productName.trim()
+      );
+
       customer.save();
 
       res.status(200).json({

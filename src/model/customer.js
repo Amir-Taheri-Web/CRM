@@ -36,7 +36,10 @@ const customerSchema = new Schema({
     default: [],
   },
 
-  date: Date,
+  date: {
+    type: Date,
+    default: () => Date().now(),
+  },
 
   createdAt: {
     type: Date,
