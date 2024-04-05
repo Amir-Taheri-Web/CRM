@@ -63,7 +63,7 @@ const handler = async (req, res) => {
         product.productName.trim()
       );
 
-      customer.save();
+      await customer.save();
 
       res.status(200).json({
         code: 200,
