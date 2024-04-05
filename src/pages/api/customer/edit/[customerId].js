@@ -1,6 +1,7 @@
 import INPUTS from "@/constants/inputs";
 import Customer from "@/model/customer";
 import connectDB from "@/utils/connectDB";
+import moment from "moment";
 
 const EMAIL_VALIDATION = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 

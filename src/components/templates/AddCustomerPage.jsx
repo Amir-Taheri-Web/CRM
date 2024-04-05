@@ -7,6 +7,7 @@ import api from "@/configs/api";
 import { useRouter } from "next/router";
 import ProductsInputs from "../modules/ProductsInputs";
 import toast from "react-hot-toast";
+import moment from "moment";
 
 const AddCustomerPage = () => {
   const [form, setForm] = useState({
