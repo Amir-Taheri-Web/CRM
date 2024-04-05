@@ -56,6 +56,7 @@ const handler = async (req, res) => {
       }
 
       if (data.phone.length === 0) customer.phone === "";
+      if (!data.date) customer.date = moment(Date.now()).format("YYY-MM-DD");
 
       customer.products = customer.products.filter((product) =>
         product.productName.trim()

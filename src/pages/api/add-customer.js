@@ -1,5 +1,6 @@
 import Customer from "@/model/customer";
 import connectDB from "@/utils/connectDB";
+import moment from "moment";
 
 const EMAIL_VALIDATION = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
@@ -54,6 +55,7 @@ const handler = async (req, res) => {
       const customer = await Customer.create({
         ...data,
         products: finalProducts,
+        date: !data.date || moment(Date.now()).format("YYY-MM-DD"),
       });
 
       res.status(201).json({
