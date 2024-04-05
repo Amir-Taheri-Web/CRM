@@ -17,7 +17,9 @@ const CustomerEditPage = ({ customer }) => {
     phone: customer.phone || "",
     postalCode: customer.postalCode || "",
     address: customer.address || "",
-    date: moment(customer.date).format("YYYY-MM-DD") || "",
+    date:
+      moment(customer.date).format("YYYY-MM-DD") ||
+      moment(Date.now()).format("YYYY-MM-DD"),
     products: customer.products || [],
     updatedAt: moment(Date.now()).format("YYYY-MM-DD"),
   });

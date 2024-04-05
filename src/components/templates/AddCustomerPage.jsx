@@ -16,7 +16,7 @@ const AddCustomerPage = () => {
     phone: "",
     postalCode: "",
     address: "",
-    date: "",
+    date: moment(Date.now()).format("YYYY-MM-DD"),
     products: [],
   });
 
