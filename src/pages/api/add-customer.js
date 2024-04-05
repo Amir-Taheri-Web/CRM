@@ -55,7 +55,7 @@ const handler = async (req, res) => {
       const customer = await Customer.create({
         ...data,
         products: finalProducts,
-        date: !data.date || moment(Date.now()).format("YYY-MM-DD"),
+        date: !data.date || moment(Date.now()).format("YYYY-MM-DD"),
       });
 
       res.status(201).json({
