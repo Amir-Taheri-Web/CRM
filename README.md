@@ -22,14 +22,14 @@ Next.js CRM app. The emphasis of this app is on Next.js api and MongoDB database
 
 ### Installing
 
-- For running the project on DEVELOPMENT mode run the below code:
+- For running the project in DEVELOPMENT mode run the below code:
 
 ```
 npm install
 npm run dev
 ```
 
-- For running the project on PRODUCTION mode run the below code:
+- For running the project in PRODUCTION mode run the below code:
 
 ```
 npm install
@@ -39,7 +39,7 @@ npm start
 
 ## Help
 
-If you have problem connecting to server please use VPN
+If you have problem connecting to server use a VPN
 
 ## Authors
 
